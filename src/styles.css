@@ -1,0 +1,148 @@
+.App {
+  margin-top: 1rem;
+  font-family: sans-serif;
+  text-align: center;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.App h1 {
+  color: #881337;
+}
+body {
+  box-sizing: border-box;
+}
+.page {
+  display: flex;
+  justify-content: space-evenly;
+}
+.navbar {
+  margin-top: 2rem;
+}
+.navbar__ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  padding-left: 2rem;
+  list-style: none;
+  font-weight: bolder;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: orangered;
+}
+.filter {
+  background-color: #e5e7eb;
+  padding: 2rem 5rem 2rem 5rem;
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  justify-content: space-around;
+  border: 2px solid black;
+}
+.filter::before {
+  content: "Filters:-";
+  position: absolute;
+  top: 12%;
+  font-weight: 800;
+  color: #881337;
+}
+.mailContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 02rem;
+  max-width: 100%;
+}
+.mail {
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 8px;
+  margin-left: 03rem;
+  margin-right: 03rem;
+  background-color: #f3f4f6;
+}
+.mail__subject {
+  display: flex;
+  justify-content: space-between;
+}
+.mail__subject > h3 {
+  font-size: 20px;
+}
+.mail__subject > button {
+  border: none;
+  background-color: lightgray;
+  text-transform: capitalize;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mail__content > p {
+  padding: 5px 15px 15px 15px;
+  text-align: left;
+  margin-left: -1rem;
+  line-height: 1.2rem;
+}
+.mail__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.mail__buttons > :first-child > button {
+  background-color: lightblue;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.mail__rightBtn {
+  min-width: 15rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.mail__rightBtn > button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.mail__rightBtn > :first-child {
+  color: red;
+}
+.mail__rightBtn > :nth-child(2) {
+  color: orange;
+}
+.mail__rightBtn > :last-child {
+  color: green;
+}
+
+.details .mail__content > p {
+  white-space: normal;
+  text-overflow: initial;
+  overflow: visible;
+}
+
+@media screen and (max-width: 485px) {
+  .page {
+    flex-direction: column;
+  }
+  .navbar__ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .filter {
+    flex-direction: column;
+    line-height: 1.7rem;
+  }
+}
+.details,
+.spam,
+.trash {
+  margin-top: 2rem;
+}
